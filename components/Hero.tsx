@@ -34,7 +34,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/525525291764"
+              href="https://wa.me/5624732141?text=Hola%20quiero%20información"
               target="_blank"
               className="rounded-full border border-white/20 px-8 py-3 font-bold transition hover:bg-white hover:text-black"
             >
