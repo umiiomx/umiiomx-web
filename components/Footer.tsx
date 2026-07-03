@@ -71,7 +71,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://wa.me/525525291764"
+              href="https://wa.me/5624732141"
               target="_blank"
               className="rounded-xl bg-blue-500 px-4 py-3 text-center font-bold hover:bg-blue-600"
             >

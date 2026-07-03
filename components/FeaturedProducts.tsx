@@ -88,7 +88,7 @@ export default function FeaturedProducts() {
 
                 <div className="mt-6 flex gap-3">
                   <a
-                    href="https://wa.me/525525291764"
+                    href="https://wa.me/525624732141"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 rounded-full bg-white px-4 py-3 text-center text-sm font-bold text-black transition hover:bg-zinc-200"

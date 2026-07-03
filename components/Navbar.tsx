@@ -22,7 +22,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://wa.me/525525291764"
+          href="https://wa.me/5624732141"
           className="rounded-full bg-blue-500 px-6 py-2 font-semibold text-white transition hover:bg-blue-400"
         >
           WhatsApp
