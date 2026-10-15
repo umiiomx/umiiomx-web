@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { getWhatsAppUrl, SITE_CONFIG } from "@/lib/config";
 
 export default function Footer() {
@@ -7,12 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex flex-col">
-              <span className="text-app text-2xl font-semibold tracking-[-0.05em]">
-                {SITE_CONFIG.name}
-              </span>
-              <span className="text-muted mt-1 text-xs">{SITE_CONFIG.slogan}</span>
-            </Link>
+            <Link href="/" aria-label="Ir al inicio de UNOVIX" className="inline-flex"><BrandLogo footer /></Link>
             <p className="text-muted mt-6 max-w-md leading-7">
               Tecnología, productos para el hogar y detalles para tu día a día.
               Conoce el catálogo y encuentra lo que va contigo.
@@ -63,4 +59,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 

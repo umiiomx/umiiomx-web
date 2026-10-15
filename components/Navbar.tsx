@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { useState } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
-import { getWhatsAppUrl, SITE_CONFIG } from "@/lib/config";
+import { getWhatsAppUrl } from "@/lib/config";
 
 const navigation = [
   { name: "Inicio", href: "/" },
@@ -19,14 +20,7 @@ export default function Navbar() {
   return (
     <header className="glass border-app fixed inset-x-0 top-0 z-50 border-b">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <Link href="/" className="flex min-w-0 flex-col" onClick={() => setMenuOpen(false)}>
-          <span className="text-app text-xl font-semibold tracking-[-0.05em]">
-            {SITE_CONFIG.name}
-          </span>
-          <span className="text-muted hidden truncate text-[9px] font-medium tracking-wide sm:block">
-            By UMIIOMX
-          </span>
-        </Link>
+        <Link href="/" aria-label="Ir al inicio de UNOVIX" className="shrink-0" onClick={() => setMenuOpen(false)}><BrandLogo /></Link>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Navegación principal">
           {navigation.map((item) => (
@@ -91,4 +85,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 
