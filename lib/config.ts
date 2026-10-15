@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   contact: {
     whatsappNumber: "525624732141",
     whatsappMessage:
-      "Hola, quiero recibir información sobre los productos de UNOVIX.",
+      "¡Hola! Vi su página de UNOVIX by UmiioMx y me gustaría recibir información sobre sus productos.",
     email: "umiiomx@gmail.com",
   },
   social: {
@@ -22,3 +22,4 @@ export function getWhatsAppUrl(message?: string) {
   const text = message ?? SITE_CONFIG.contact.whatsappMessage;
   return `https://wa.me/${SITE_CONFIG.contact.whatsappNumber}?text=${encodeURIComponent(text)}`;
 }
+
