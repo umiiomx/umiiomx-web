@@ -30,3 +30,11 @@ footer .brand-gradient{box-shadow:0 4px 14px #1976e91a}
 .discovery-home{background:#f4ecdf}
 .dark .discovery-home{background:#29251f}
 .catalog-category{color:var(--brand-link)}
+/* Degradado de marca constante en claro y oscuro. */
+.brand-logo::after{background:linear-gradient(115deg,#147bea 12%,#4265e8 49%,#913de0 91%)}
+.showcase-button,.brand-gradient{background-color:#4166e8;background-image:linear-gradient(115deg,#147bea,#7850de);color:#fff}
+.showcase-button:hover,.brand-gradient:hover{background-color:#3459d5;background-image:linear-gradient(115deg,#0968d3,#6c38ce)}
+.hero-copy h1 span{background-image:linear-gradient(100deg,#1676df 10%,#8250d7 90%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.dark .hero-copy h1 span{background-image:linear-gradient(100deg,#72b8ff 10%,#bd91ff 90%)}
+.category-icon{background:linear-gradient(135deg,#eaf2ff,#f0eafa)}
+.dark .category-icon{background:linear-gradient(135deg,#1c2c44,#2b2340)}
