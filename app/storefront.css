@@ -8,3 +8,25 @@
 .brand-logo-image{filter:brightness(0) invert(.5)}
 
 
+/* Color de marca constante y superficies más cálidas. */
+:root,.light{--surface:#f7f5f1;--surface-strong:#efede8;--border:#e5e3df;--brand-accent:#1976e9;--brand-link:#0966cc}
+.dark{--surface:#1c1d21;--surface-strong:#292b31;--border:#373a42;--brand-accent:#1976e9;--brand-link:#79b6ff}
+.brand-logo-image{filter:none;opacity:0}
+.brand-logo::after{content:"";position:absolute;inset:0;background:#1976e9;mask-image:url('/brand/unovix-by-umiiomx.png');mask-size:100% auto;mask-position:0 -9px;mask-repeat:no-repeat;-webkit-mask-image:url('/brand/unovix-by-umiiomx.png');-webkit-mask-size:100% auto;-webkit-mask-position:0 -9px;-webkit-mask-repeat:no-repeat;pointer-events:none}
+.brand-logo-footer::after{mask-position:0 -15px;-webkit-mask-position:0 -15px}
+@media(min-width:1024px){.brand-logo:not(.brand-logo-footer)::after{mask-position:0 -10px;-webkit-mask-position:0 -10px}}
+.showcase-button,.brand-gradient{background:#1976e9;color:white;background-image:none}
+.showcase-button:hover,.brand-gradient:hover{background:#0966cc;opacity:1}
+.showcase-link{color:var(--brand-link)}
+.hero-copy h1 span{color:var(--brand-link)}
+.showcase-hero{background:linear-gradient(165deg,#f8f5ef 0%,#f7f8fc 60%,#eaf2ff 100%)}
+.dark .showcase-hero{background:linear-gradient(165deg,#19191d 0%,#171b24 65%,#142239 100%)}
+.category-icon{background:#edf3fe;color:#1976e9}
+.dark .category-icon{background:#1d2a3f;color:#79b6ff}
+.benefit-grid>div>svg{color:var(--brand-link)}
+footer.bg-surface{background:#f8f5f0}
+.dark footer.bg-surface{background:#1b1c20}
+footer .brand-gradient{box-shadow:0 4px 14px #1976e91a}
+.discovery-home{background:#f4ecdf}
+.dark .discovery-home{background:#29251f}
+.catalog-category{color:var(--brand-link)}
