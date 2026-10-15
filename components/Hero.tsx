@@ -1,68 +1,9 @@
-export default function Hero() {
-  return (
-    <section className="relative overflow-hidden bg-zinc-950 text-white">
-      <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6 py-24">
+import Link from "next/link";
+import ProductVisual from "@/components/ProductVisual";
+import { getWhatsAppUrl } from "@/lib/config";
+export default function Hero() { return <>
+  <div className="store-notice">Tecnología, hogar y algo más. <Link href="/productos">Descubre UNOVIX <span aria-hidden="true">›</span></Link></div>
+  <section className="showcase-hero"><div className="hero-copy"><p className="eyebrow">UNOVIX BY UMIIOMX</p><h1>Más para tu día.<br/><span>Más posibilidades.</span></h1><p className="hero-subtitle">Tecnología que disfrutas.<br className="sm:hidden"/> Detalles que hacen hogar.</p><div className="showcase-actions"><Link href="/productos" className="showcase-button">Explorar productos</Link><a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="showcase-link">Hablemos <span aria-hidden="true">›</span></a></div></div><div className="hero-product"><ProductVisual /></div><p className="visual-caption">Ilustración de producto · Explora los modelos disponibles en el catálogo.</p></section>
+  <section className="discovery-grid" aria-label="Descubre más de UNOVIX"><article className="discovery-panel discovery-audio"><div className="discovery-copy"><p className="eyebrow">A TU RITMO</p><h2>Que suene<br/>tu mundo.</h2><p>Audífonos y bocinas para acompañarte.</p><Link href="/productos?grupo=audio" className="showcase-link">Explorar audio <span aria-hidden="true">›</span></Link></div><div className="discovery-visual"><ProductVisual kind="audio" /></div></article><article className="discovery-panel discovery-home"><div className="discovery-copy"><p className="eyebrow">TU ESPACIO. TU ESTILO.</p><h2>Pequeños detalles.<br/>Grandes momentos.</h2><p>Encuentra algo para tu hogar y tu día a día.</p><Link href="/productos?grupo=hogar" className="showcase-link">Explorar hogar <span aria-hidden="true">›</span></Link></div><div className="discovery-visual"><ProductVisual kind="home" /></div></article></section>
+</>; }
 
-        {/* Texto */}
-        <div className="w-full lg:w-1/2">
-
-          <p className="mb-4 tracking-[0.4em] uppercase text-blue-400 text-sm">
-            Tienda Oficial
-          </p>
-
-          <h1 className="text-6xl font-black leading-tight">
-            Tecnología
-            <br />
-            premium para
-            <br />
-            tu día a día.
-          </h1>
-
-          <p className="mt-8 max-w-xl text-lg text-zinc-300">
-            Tablets, celulares, audífonos, accesorios y tecnología
-            seleccionada para ofrecer la mejor relación calidad-precio
-            en todo México.
-          </p>
-
-          <div className="mt-10 flex gap-4">
-
-            <a
-              href="#productos"
-              className="rounded-full bg-white px-8 py-3 font-bold text-black transition hover:bg-zinc-300"
-            >
-              Ver productos
-            </a>
-
-            <a
-              href="https://wa.me/5624732141?text=Hola%20quiero%20información"
-              target="_blank"
-              className="rounded-full border border-white/20 px-8 py-3 font-bold transition hover:bg-white hover:text-black"
-            >
-              Cotizar por WhatsApp
-            </a>
-
-          </div>
-
-        </div>
-
-        {/* Imagen */}
-        <div className="hidden w-1/2 justify-center lg:flex">
-
-          <div className="rounded-[50px] border border-white/10 bg-gradient-to-br from-blue-500 via-cyan-400 to-zinc-900 p-8 shadow-2xl">
-
-            <div className="aspect-square w-[420px] rounded-[35px] bg-black/40 backdrop-blur flex items-center justify-center">
-
-              <span className="text-zinc-400">
-                Aquí irá la Tablet Umiio
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-  );
-}

@@ -4,16 +4,4 @@ import Categories from "@/components/Categories";
 import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
 import FeaturedProducts from "@/components/FeaturedProducts";
-
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Categories />
-      <Benefits />
-      <FeaturedProducts />
-      <Footer />
-    </>
-  );
-}
+export default function Home(){return <><Navbar/><main className="storefront"><Hero/><Categories/><FeaturedProducts/><Benefits/></main><Footer/></>;}

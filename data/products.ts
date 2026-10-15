@@ -1,126 +1,131 @@
-export type ProductStatus =
-  | "active"
-  | "low-stock"
-  | "discontinued"
-  | "coming-soon";
-
+import type { Specification } from "@/lib/product-attributes";
 export type Product = {
-  id: string;
   name: string;
-  brand: string;
-  model: string;
-  image: string;
-  gallery?: string[];
-
+  slug: string;
   category: string;
-  badge: string;
   description: string;
-  features: string[];
-
-  wholesalePrice: number;
-  retailPrice?: number;
-  discountPrice?: number;
-  discountActive: boolean;
-
-  priceLabel: string;
-  whatsapp: string;
-
-  year: number;
-  stock: number;
-  status: ProductStatus;
-  lifeCycle: "seasonal" | "permanent";
-  replacementProductId?: string;
-
-  featured: boolean;
+  gradient: string;
+  price?: number | null;
+  stock?: number;
+  images?: string[];
+  active?: boolean;
+  featured?: boolean;
+  specifications?: Specification[];
 };
 
 export const products: Product[] = [
   {
-    id: "s26-ultra",
-    name: "Tablet S26 Ultra",
-    brand: "Umiio",
-    model: "S26 Ultra",
-    image: "/products/s26-ultra.png",
-    category: "Tablet",
-    badge: "Modelo actual",
-    description:
-      "Tablet Android 15 con pantalla de 10.1 pulgadas, ranura SIM y accesorios incluidos.",
-    features: [
-      "16 GB RAM",
-      "1 TB almacenamiento",
-      "Android 15",
-      "Pantalla 10.1 pulgadas",
-      "Ranura SIM",
-      "Incluye accesorios",
+    "slug": "s26-ultra",
+    "name": "Tablet S26 Ultra",
+    "category": "Tabletas",
+    "description": "Tablet Android 15 con pantalla de 10.1 pulgadas, ranura SIM y accesorios incluidos.",
+    "gradient": "from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800",
+    "price": 1699,
+    "stock": 25,
+    "images": [
+      "/products/s26-ultra.png"
     ],
-    wholesalePrice: 1350,
-    retailPrice: 1699,
-    discountPrice: 0,
-    discountActive: false,
-    priceLabel: "$1,350 mayoreo",
-    whatsapp: "5624732141",
-    year: 2026,
-    stock: 25,
-    status: "active",
-    lifeCycle: "seasonal",
-    featured: true,
+    "active": true,
+    "featured": true,
+    "specifications": [
+      {
+        "name": "Marca",
+        "value": "Umiio"
+      },
+      {
+        "name": "Modelo",
+        "value": "S26 Ultra"
+      }
+    ]
   },
   {
-    id: "s25-ultra",
-    name: "Tablet S25 Ultra",
-    brand: "Umiio",
-    model: "S25 Ultra",
-    image: "/products/s25-ultra.png",
-    category: "Tablet",
-    badge: "Últimas piezas",
-    description:
-      "Tablet modelo anterior disponible hasta agotar existencias.",
-    features: [
-      "16 GB RAM",
-      "256 GB almacenamiento",
-      "Pantalla 10.1 pulgadas",
-      "Ranura SIM",
-      "Incluye accesorios",
+    "slug": "s25-ultra",
+    "name": "Tablet S25 Ultra",
+    "category": "Tabletas",
+    "description": "Tablet modelo anterior disponible hasta agotar existencias.",
+    "gradient": "from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800",
+    "price": 1599,
+    "stock": 12,
+    "images": [
+      "/products/s25-ultra.png"
     ],
-    wholesalePrice: 1280,
-    retailPrice: 1599,
-    discountPrice: 0,
-    discountActive: false,
-    priceLabel: "$1,280 mayoreo",
-    whatsapp: "5624732141",
-    year: 2025,
-    stock: 12,
-    status: "low-stock",
-    lifeCycle: "seasonal",
-    replacementProductId: "s26-ultra",
-    featured: true,
+    "active": true,
+    "featured": true,
+    "specifications": [
+      {
+        "name": "Marca",
+        "value": "Umiio"
+      },
+      {
+        "name": "Modelo",
+        "value": "S25 Ultra"
+      }
+    ]
   },
   {
-    id: "jabonera-jack",
-    name: "Jabonera Jack",
-    brand: "Umiio",
-    model: "Jack",
-    image: "/products/jabonera-jack.png",
-    category: "Hogar",
-    badge: "Nuevo",
-    description:
-      "Jabonera dispensadora con diseño decorativo para baño o cocina.",
-    features: [
-      "Diseño decorativo",
-      "Dispensador manual",
-      "Ideal para baño o cocina",
-      "Fácil de rellenar",
+    "slug": "jabonera-jack",
+    "name": "Jabonera Jack",
+    "category": "Hogar",
+    "description": "Jabonera dispensadora con diseño decorativo para baño o cocina.",
+    "gradient": "from-zinc-100 to-zinc-200 dark:from-zinc-900 dark:to-zinc-800",
+    "price": null,
+    "stock": 40,
+    "images": [
+      "/products/jabonera-jack.png"
     ],
-    wholesalePrice: 0,
-    retailPrice: 0,
-    discountPrice: 0,
-    discountActive: false,
-    priceLabel: "Consulta precio",
-    whatsapp: "5624732141",
-    year: 2026,
-    stock: 40,
-    status: "active",
-    lifeCycle: "seasonal",
-    featured: true,
+    "active": true,
+    "featured": true,
+    "specifications": [
+      {
+        "name": "Marca",
+        "value": "Umiio"
+      },
+      {
+        "name": "Modelo",
+        "value": "Jack"
+      }
+    ]
   },
+  {
+    "name": "Rikkai S25",
+    "slug": "rikkai-s25",
+    "category": "Tabletas",
+    "description": "Tableta de 10.1 pulgadas con accesorios y conectividad para trabajo, estudio y entretenimiento.",
+    "gradient": "from-purple-200 via-fuchsia-100 to-violet-200 dark:from-purple-950 dark:via-zinc-950 dark:to-violet-950"
+  },
+  {
+    "name": "Rikkai A9+",
+    "slug": "rikkai-a9-plus",
+    "category": "Tabletas",
+    "description": "Una opción práctica con diseño moderno, accesorios completos y funciones para el uso diario.",
+    "gradient": "from-emerald-200 via-zinc-100 to-purple-200 dark:from-emerald-950 dark:via-zinc-950 dark:to-purple-950"
+  },
+  {
+    "name": "Asumi i17 Plus",
+    "slug": "asumi-i17-plus",
+    "category": "Tabletas",
+    "description": "Pantalla amplia, almacenamiento generoso y conectividad para distintos escenarios de uso.",
+    "gradient": "from-blue-200 via-purple-100 to-fuchsia-200 dark:from-blue-950 dark:via-purple-950 dark:to-fuchsia-950"
+  },
+  {
+    "name": "PZ886",
+    "slug": "pz886",
+    "category": "Celulares",
+    "description": "Smartphone compacto pensado para llamadas, mensajería y funciones esenciales.",
+    "gradient": "from-orange-200 via-zinc-100 to-purple-200 dark:from-orange-950 dark:via-zinc-950 dark:to-purple-950"
+  },
+  {
+    "name": "Power Bank",
+    "slug": "power-bank",
+    "category": "Accesorios",
+    "description": "Energía portátil para mantener tus dispositivos disponibles durante el día.",
+    "gradient": "from-zinc-200 via-purple-100 to-pink-200 dark:from-zinc-900 dark:via-purple-950 dark:to-pink-950"
+  },
+  {
+    "name": "Cable UM-L42",
+    "slug": "cable-um-l42",
+    "category": "Cables",
+    "description": "Familia de cables para distintas conexiones y necesidades de carga.",
+    "gradient": "from-sky-200 via-zinc-100 to-violet-200 dark:from-sky-950 dark:via-zinc-950 dark:to-violet-950"
+  }
 ];
